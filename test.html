@@ -1,0 +1,96 @@
+---
+layout: default 
+title: test page 
+description_html: >-
+  <h2>Hello World</h2><p>bob was here</p>
+banner-image: /images/placeholder.JPG
+heading-title: Look at this island! 
+video:
+  video-type: vimeo
+  youtube-video:  >-
+        <iframe
+        src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+        allowfullscreen
+        allowtransparency
+        allow="autoplay"
+        ></iframe>
+  vimeo-video: >-
+      <iframe
+      src="https://player.vimeo.com/video/76979871?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
+      allowfullscreen
+      allowtransparency
+      allow="autoplay"
+      ></iframe>
+gallery:
+  - background_image: /images/placeholder.JPG
+    aspect-ratio:  portrait
+    column-size: 
+seo:
+  meta-description: 
+  meta-keywords:
+  featured-image_path:
+  hide-from-google:
+---
+
+<!--  image banner block  -->
+      <section class="bg-image bg-cover bg-center min-h-screen flex items-center justify-center" style="background-image: url('{{page.banner-image}}')">
+        <div> 
+        <h2> {{page.heading-title}} </h2> 
+        </div> 
+      </section> 
+
+<!--  text content block  -->
+      <section> 
+          <div>
+      {{page.description_html}}
+          </div> 
+      </section> 
+    
+<!-- Youtube embed block  -->
+    <section class="max-w-screen-sm p-2"> 
+
+      {% if page.video.video-type == 'youtube' %}
+
+          <div class="plyr__video-embed relative" id="player">
+          {{page.video.youtube-video}}
+          </div>
+
+      {% elsif page.video.video-type == 'vimeo' %}
+
+          <div class="plyr__video-embed relative" id="player">
+              {{page.video.vimeo-video}}
+          </div>
+
+      {% endif%}
+
+    </section> 
+
+<!-- gallery block  -->
+
+
+<!-- image gallery popup -->
+
+<section class="padded">
+  <div class="gallery grid grid-cols-6" id="lightgallery">
+
+    {% for item in page.gallery %}
+
+      <div class="{{item.column-size}} gallery-item bg-image {{item.aspect-ratio}} p-10" 
+             style="background-image: url('{{item.background_image}}');">
+      </div>
+  
+    {% endfor %}
+    
+  </div>
+  </section> 
+  
+
+
+
+
+
+<!-- slider block  -->
+
+<!-- call to action block  -->
+
+<!-- newsletter signup -->
