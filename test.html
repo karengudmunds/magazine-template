@@ -23,7 +23,22 @@ video:
       ></iframe>
 gallery:
   - background_image: /images/placeholder.JPG
-    aspect-ratio:  portrait
+    aspect-ratio:  aspect-square
+    column-size: 
+  - background_image: /images/placeholder.JPG
+    aspect-ratio:  aspect-square
+    column-size: 
+  - background_image: /images/placeholder.JPG
+    aspect-ratio:  aspect-square
+    column-size: 
+  - background_image: /images/placeholder.JPG
+    aspect-ratio:  aspect-square
+    column-size: 
+  - background_image: /images/placeholder.JPG
+    aspect-ratio:  aspect-landscape
+    column-size: 
+  - background_image: /images/placeholder.JPG
+    aspect-ratio:  aspect-landscape
     column-size: 
 seo:
   meta-description: 
@@ -71,7 +86,7 @@ seo:
 <!-- image gallery popup -->
 
 <section class="padded">
-  <div class="gallery grid grid-cols-6" id="lightgallery">
+  <div class="gallery grid grid-cols-4 gap-2" id="lightgallery">
 
     {% for item in page.gallery %}
 
@@ -84,13 +99,15 @@ seo:
   </div>
   </section> 
   
-
-
-
-
-
 <!-- slider block  -->
 
-<!-- call to action block  -->
+<!-- call to action block  --> 
+
+<section class="flex justify-center item-center p-2"> 
+  <h2 class="editable"> Title </h2> 
+  <p class="editable "> This is a paragraph  </p> 
+  <a href="#"> page.cta.button-text </button>
+</section> 
 
 <!-- newsletter signup -->
+
