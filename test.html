@@ -24,7 +24,7 @@ video:
 gallery:
   - background_image: /images/placeholder.JPG
     aspect-ratio:  aspect-square
-    column-size: 
+    column-size:
   - background_image: /images/placeholder.JPG
     aspect-ratio:  aspect-square
     column-size: 
@@ -39,7 +39,7 @@ gallery:
     column-size: 
   - background_image: /images/placeholder.JPG
     aspect-ratio:  aspect-landscape
-    column-size: 
+    column-size: cols-2
 seo:
   meta-description: 
   meta-keywords:
@@ -85,8 +85,8 @@ seo:
 
 <!-- image gallery popup -->
 
-<section class="padded">
-  <div class="gallery grid grid-cols-4 gap-2" id="lightgallery">
+<section class="p-2">
+  <div class="gallery grid grid-cols-4 gap-2 min-h-screen" id="lightgallery">
 
     {% for item in page.gallery %}
 
