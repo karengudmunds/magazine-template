@@ -55,6 +55,7 @@ _array_structures:
       value:
         _id: text-content
         title: text content block
+        section-styles:
         description_html: 
     - label: Video
       icon: article
