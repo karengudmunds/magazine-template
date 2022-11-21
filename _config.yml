@@ -43,7 +43,7 @@ page_blocks: []
 _array_structures:
   page_blocks:
     - label: Banner blocks 
-      icon: 
+      icon: article
       value:
         _id: banner-blocks 
         title: Banner block
@@ -51,25 +51,25 @@ _array_structures:
         heading: This is a heading
         subtitle: This is a subtitle 
     - label: Text content
-      icon:
+      icon: article
       value:
         _id: text-content
         title: text content block
         _description_html: 
     - label: Video
-      icon:
+      icon: article
       value:
         _id: video
         title: video block
         video-types: 
     - label: Gallery
-      icon: 
+      icon: article
       value:
           _id: gallery 
           title: gallery block
           aspect-ratio:
     - label: CTA
-      icon: 
+      icon: article
       value:
          _id: cta 
          title: Call to action
