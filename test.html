@@ -21,6 +21,11 @@ video:
       allowtransparency
       allow="autoplay"
       ></iframe>
+  embedded_poster: /assets/css/image.jpg
+  embedded: 
+    - video_path: /assets/css/team-intro.mp4
+      xfile_type: mp4
+gallery-column-count: 4
 gallery:
   - background_image: /images/placeholder.JPG
     aspect-ratio:  aspect-square
@@ -36,10 +41,10 @@ gallery:
     column-size: 
   - background_image: /images/placeholder.JPG
     aspect-ratio:  aspect-landscape
-    column-size: 
+    column-size: 2
   - background_image: /images/placeholder.JPG
     aspect-ratio:  aspect-landscape
-    column-size: cols-2
+    column-size: 2
 seo:
   meta-description: 
   meta-keywords:
@@ -61,7 +66,7 @@ seo:
           </div> 
       </section> 
     
-<!-- Youtube embed block  -->
+<!-- Youtube & vimeo embed block  -->
     <section class="max-w-screen-sm p-2"> 
 
       {% if page.video.video-type == 'youtube' %}
@@ -76,7 +81,20 @@ seo:
               {{page.video.vimeo-video}}
           </div>
 
-      {% endif%}
+          {% elsif page.video.video-type == 'embedded' %}
+
+          <video id="player" playsinline controls autoplay muted autobuffer="true" preload="auto" loop data-poster="{{ page.video.embedded_poster }}">
+  
+            {% for item in page.video.embedded %}
+            <source src="{{ item.video_path }}" type="video/{{ item.file_type }}" />
+
+            {% endfor %}
+            <!-- Captions are optional -->
+            <track kind="captions" label="English captions" src="/path/to/captions.vtt" srclang="en" default />
+          </video>
+
+{% endif %}
+
 
     </section> 
 
@@ -86,11 +104,11 @@ seo:
 <!-- image gallery popup -->
 
 <section class="p-2">
-  <div class="gallery grid grid-cols-4 gap-2 min-h-screen" id="lightgallery">
+  <div class="gallery grid grid-cols-{{page.gallery-column-count}} gap-2" id="lightgallery">
 
     {% for item in page.gallery %}
 
-      <div class="{{item.column-size}} gallery-item bg-image {{item.aspect-ratio}} p-10" 
+      <div class="col-span-{{item.column-size}} gallery-item bg-image {{item.aspect-ratio}} p-10" 
              style="background-image: url('{{item.background_image}}');">
       </div>
   
@@ -103,10 +121,10 @@ seo:
 
 <!-- call to action block  --> 
 
-<section class="flex justify-center item-center p-2"> 
-  <h2 class="editable"> Title </h2> 
-  <p class="editable "> This is a paragraph  </p> 
-  <a href="#"> page.cta.button-text </button>
+<section class="flex justify-center item-center p-2 editable"> 
+  <h2> Title </h2> 
+  <p>  This is a paragraph  </p> 
+  <a href="#"> button  </button>
 </section> 
 
 <!-- newsletter signup -->
