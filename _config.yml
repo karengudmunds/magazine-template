@@ -62,7 +62,6 @@ _select_data:
       - aspect-square: square
       - aspect-landscape: landscape
       - apect-portrait: portrait
-      - aspect-portrait-tall: portrait-tall
     column-alignment:
       - align-top: top
       - align-middle: middle 
