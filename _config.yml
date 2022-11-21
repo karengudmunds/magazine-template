@@ -24,5 +24,9 @@ _array_structures:
       value:
           _id: gallery 
           title: gallery block
-
+    - label: CTA
+      icon: 
+      value:
+         _id: cta 
+         title: Call to action
         
