@@ -4,32 +4,32 @@ _select_data:
       - youtube
       - self-hosted
     section-styles:
-      p-5: padded sm
-      p-1: padded md
-      p-15: padded lg
-      light-bg: light background
-      featured-bg: featured background
-      dark-bg: dark background
-      text-center: centered
+       p-5: padded sm
+       p-1: padded md
+       p-15: padded lg
+       light-bg: light background
+       featured-bg: featured background
+       dark-bg: dark background
+       text-center: centered
     inner-styles:
-      p-5: padded sm
-      p-10: padded md
-      p-15: padded lg
-      max-w-screen-md: capped width md
-      max-w-screen-lg: capped width lg
-      max-w-screen-xl: capped width xl
+       p-5: padded sm
+       p-10: padded md
+       p-15: padded lg
+       max-w-screen-md: capped width md
+       max-w-screen-lg: capped width lg
+       max-w-screen-xl: capped width xl
     aspect-ratio:
-      aspect-square: square
-      aspect-landscape: landscape
-      aspect-portrait: portrait
-      aspect-portrait-tall: portrait-tall
+       aspect-square: square
+       aspect-landscape: landscape
+       aspect-portrait: portrait
+       aspect-portrait-tall: portrait-tall
     column-alignment:
-      align-top: top
-      align-middle: middle 
-      align-bottom: bottom
+       align-top: top
+       align-middle: middle 
+       align-bottom: bottom
     button-styles:
        light-bg: light-color
-      dark-bg: dark-color
+       dark-bg: dark-color
       featured-bg: featured-color
     banner-heights:
       - tall-35
@@ -38,7 +38,7 @@ _select_data:
       - tall-70
       - tall-80
       - tall-90
-      
+
 page_blocks: [] 
 _array_structures:
   page_blocks:
