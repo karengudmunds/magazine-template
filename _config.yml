@@ -67,7 +67,11 @@ _array_structures:
       value:
           _id: gallery 
           title: gallery block
-          aspect-ratio:
+          gallery-column-count: 4
+          gallery:
+                - background_image: /images/placeholder.JPG
+                  aspect-ratio: aspect-square
+                  column-size: 1
     - label: CTA
       icon: article
       value:

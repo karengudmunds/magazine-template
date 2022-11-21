@@ -4,13 +4,13 @@
     {% if block.video.video-type == 'youtube' %}
 
         <div class="plyr__video-embed relative" id="player">
-        {{block.video.youtube-video}}
+        {{block.video.video-iframe}}
         </div>
 
     {% elsif block.video.video-type == 'vimeo' %}
 
         <div class="plyr__video-embed relative" id="player">
-            {{block.video.vimeo-video}}
+            {{block.video.video.iframe}}
         </div>
 
         {% elsif block.video.video-type == 'embedded' %}
@@ -26,3 +26,5 @@
         </video>
 
 {% endif %}
+
+</section>
