@@ -61,7 +61,8 @@ _select_data:
     aspect-ratio:
       - aspect-square: square
       - aspect-landscape: landscape
-      - apect-portrait: portrait
+      - aspect-portrait: portrait
+      - aspect-portrait-tall: portrait-tall
     column-alignment:
       - align-top: top
       - align-middle: middle 
