@@ -21,10 +21,10 @@ _array_structures:
         title: video block
     - label: Gallery
        icon: 
-      value:
-        _id: gallery 
-        title: gallery block
-        video: 
-        video-type:
-        
+       value:
+          _id: gallery 
+          title: gallery block
+          video: 
+          video-type:
+
         
