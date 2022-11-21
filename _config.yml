@@ -13,7 +13,7 @@ _array_structures:
       value:
         _id: text-content
         title: text content block
-        description_html: 
+        _description_html: 
     - label: Video
       icon:
       value:
@@ -24,7 +24,5 @@ _array_structures:
       value:
           _id: gallery 
           title: gallery block
-          video: 
-          video-type:
 
         
