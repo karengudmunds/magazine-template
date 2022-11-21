@@ -3,25 +3,25 @@ _array_structures:
   page_blocks:
     - label: Banner blocks 
       icon: 
-      value: 
+      value:
         _id: banner-blocks 
         title: Banner block
         heading: This is a heading
         subtitle: This is a subtitle 
     - label: Text content
-      icon: 
+      icon:
       value:
         _id: text-content
         title: text content block
         description_html: 
     - label: Video
-      icon: 
+      icon:
       value:
         _id: video
         title: video block
     - label: Gallery
-       icon: 
-       value:
+      icon: 
+      value:
           _id: gallery 
           title: gallery block
           video: 
