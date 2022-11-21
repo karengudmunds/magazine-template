@@ -6,6 +6,7 @@ _array_structures:
       value:
         _id: banner-blocks 
         title: Banner block
+        banner-heights:
         heading: This is a heading
         subtitle: This is a subtitle 
     - label: Text content
@@ -19,17 +20,67 @@ _array_structures:
       value:
         _id: video
         title: video block
+        video-types: 
     - label: Gallery
       icon: 
       value:
           _id: gallery 
           title: gallery block
+          aspect-ratio:
     - label: CTA
       icon: 
       value:
          _id: cta 
          title: Call to action
+         section-styles:
+         button-styles:
          heading:
          description:
          button_ url: 
-        
+
+_select_data: 
+    video-types: 
+      - vimeo 
+      - youtube
+      - self-hosted
+    section-styles:
+      - p-5: padded sm
+      - p-1: padded md
+      - p-15: padded lg
+      - light-bg: light background
+      - featured-bg: featured background
+      - dark-bg: dark background
+      - text-center: centered
+    inner-styles:
+      - p-5: padded sm
+      - p-10: padded md
+      - p-15: padded lg
+      - max-w-screen-md: capped width md
+      - max-w-screen-lg: capped width lg
+      - max-w-screen-xl: capped width xl
+    aspect-ratio:
+      - aspect-square: square
+      - aspect-landscape: landscape
+      - apect-portrait: portrait
+      - aspect-portrait-tall: portrait-tall
+    column-alignment:
+      - align-top: top
+      - align-middle: middle 
+      - align-bottom: bottom
+    sizes: 
+      - full-width
+      - one-half
+      - one-third
+      - two-thirds
+    button-styles:
+      - light-bg: light-color
+      - dark-bg: dark-color
+      - featured-bg: featured-color
+    banner-heights:
+      - tall-35
+      - tall-50
+      - tall-60
+      - tall-70
+      - tall-80
+      - tall-90
+    
