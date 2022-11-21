@@ -30,7 +30,7 @@ _select_data:
     button-styles:
        light-bg: light-color
        dark-bg: dark-color
-      featured-bg: featured-color
+       featured-bg: featured-color
     banner-heights:
       - tall-35
       - tall-50
