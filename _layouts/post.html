@@ -5,3 +5,40 @@ layout: default
 {% for block in page.page_blocks %}
         {% include /block/{{block._id}}.html %}
 {% endfor %}
+
+
+      <!-- This is the related posts section that will show up on the post page -->
+
+  <section>
+    <h4 class="text-center"> Related Posts </h4>
+    <div class="grid grid-cols-3">
+
+		{% assign pageCategory = page.categories[0] %}
+		{% assign relevant = site.categories[pageCategory] | where_exp:"post","post.url != page.url" %}
+  		{% for post in relevant limit:3 %}
+
+      		<a href="{{post.url}}">
+            <img src="{{post.featured_image}}" alt="">
+        		<span class="author">by {{post.author}}</span> //
+        		<span class="author"> {{post.date | date: "%m.%d.%Y" }} </span>
+        		<h3> {{post.title}} </h3>
+      		</a>
+      		
+  		{% endfor %}
+  		
+    </div>
+  </section>
+
+  <section class="sticky"> 
+      <nav>
+        <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="http://pinterest.com/pin/create/link/?url={{page.url}}&description={{page.title}}" rel="nofollow" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest-p"></i>
+        </a>
+      </nav>
+  </section> 

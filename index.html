@@ -7,9 +7,39 @@ seo:
   featured-image_path:
   hide-from-google:
 ---
-<h1 class="text-4xl font-bold text-slate-900">Welcome to your homepage!</h1>
+
+<h1 class="text-4xl text-center p-4"> Today's stories!</h1>
+
+<!--  image banner block  -->
+    <section class="bg-image bg-cover bg-center tall-90 flex items-center justify-center" style="background-image: url('/images/placeholder.JPG')">
+      <div> 
+      <h2> </h2> 
+      <h2>  </h2> 
+      </div> 
+    </section> 
 
 
+
+<div class="min-h-screen grid grid-cols-3 md:grid-cols-4 gap-4 p-10">
+
+  {% for post in site.posts limit:5 %}
+
+  <a class="bg-blue-100 p-4 bg-cover bg-center relative
+  {% cycle 'col-span-1', 'col-span-2 row-span-2', 'col-span-1', 'col-span-1', 'col-span-1',  %}" 
+  style="background-image:url('{{post.featured_image}}')" href="{{post.url}}">
+      <div class="absolute inset-0 hover:bg-slate-300 p-4 text-transparent hover:text-white ">
+        <h3> {{post.categories}} </h3>   
+        <h2> {{post.title}} </h2>
+        <h2> {{post.author}} </h2> 
+      </div>
+  </a>
+
+  {% endfor %}
+
+</div>
+
+
+<!-- 
 <section class="grid md:grid-cols-3"> 
 
 {% for post in site.posts %}
@@ -24,4 +54,4 @@ seo:
 </div> 
 {% endfor %}
 
-</section> 
+</section>  -->
