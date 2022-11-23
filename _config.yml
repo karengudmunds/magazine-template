@@ -1,3 +1,15 @@
+sass:
+  dir: _sass
+  style: compressed  
+
+css_dir: "/style"
+
+plugins:
+  - jekyll-postcss
+
+postcss:
+  cache: false
+
 _select_data: 
     video-types: 
       - vimeo 

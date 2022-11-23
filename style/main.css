@@ -1,14 +1,23 @@
+---
+# Main CSS file with Tailwind
+---
+
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
 
 /* Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+.button {
+  @apply inline-block p-6 bg-blue-600 text-white hover:bg-blue-800 transition;
+}
 /* Custom CSS */
 
 /*  Responsive design  */
@@ -20,7 +29,7 @@
 /*  2xl - 1536px  */
 
 
- /* width of 16 by default, 32 on medium screen and 48 on large screen. -----    */
+/* width of 16 by default, 32 on medium screen and 48 on large screen. -----    */
 
 
 /*  Utility classes  */
@@ -39,68 +48,68 @@
 /*  Font size  */
 
 .text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem; 
+font-size: 0.75rem;
+line-height: 1rem; 
 }
 
 .text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem; 
+font-size: 0.875rem;
+line-height: 1.25rem; 
 }
 
 .text-base {
-  font-size: 1rem;
-  line-height: 1.5rem; 
+font-size: 1rem;
+line-height: 1.5rem; 
 }
 
 .text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem; 
+font-size: 1.125rem;
+line-height: 1.75rem; 
 }
 
 .text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem; 
+font-size: 1.25rem;
+line-height: 1.75rem; 
 }
 
 .text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem; 
+font-size: 1.5rem;
+line-height: 2rem; 
 }
 
 .text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem; 
+font-size: 1.875rem;
+line-height: 2.25rem; 
 }
 
 .text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem; 
+font-size: 2.25rem;
+line-height: 2.5rem; 
 }
 
 .text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+font-size: 3rem;
+line-height: 1;
 }
 
 .text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
+font-size: 3.75rem;
+line-height: 1;
 }
 
 .text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
+font-size: 4.5rem;
+line-height: 1;
 }
 
 .text-8xl {
-  font-size: 6rem;
-  line-height: 1;
+font-size: 6rem;
+line-height: 1;
 }
 
 .text-9xl {
-  font-size: 8rem;
-  line-height: 1;
+font-size: 8rem;
+line-height: 1;
 }
 
 /*  font style  */
@@ -198,12 +207,12 @@
 /*  Search  */
 
 input#search-input  {
-  padding: 0.5rem;
-  border: 1px solid black; 
-  margin-bottom: 2rem;
+padding: 0.5rem;
+border: 1px solid black; 
+margin-bottom: 2rem;
 }
 
 
 .search-result {
-  border: 1px solid black
+border: 1px solid black
 }
