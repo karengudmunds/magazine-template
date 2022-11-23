@@ -1,12 +1,14 @@
 ---
 layout: post
-title: Let's travel the world
-author: Karen
+title: My top places in Iceland
+author: By Tina
 categories: 
-  - beauty 
+  - location
   - travel 
   - food 
-featured_image: /images/placeholder.JPG
+  - beauty
+featured_image: /images/norway11.JPG
+hover_image: /images/norway37.JPG
 date: 2022-11-19 00:00:00
 page_blocks:
   - _id: banner

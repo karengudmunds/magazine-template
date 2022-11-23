@@ -1,12 +1,13 @@
 ---
 layout: post
-title: Let's travel the world
-author: Karen
+title: Sailing trip 
+author: By Emilio
 categories: 
-  - beauty 
-  - travel 
+  - travel
+  - beauty
   - food 
-featured_image: /images/placeholder.JPG
+featured_image: /images/norway37.JPG
+hover_image: /images/norway60.JPG
 date: 2022-11-19 00:00:00
 page_blocks:
   - _id: banner

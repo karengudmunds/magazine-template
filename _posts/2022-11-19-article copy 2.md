@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Let's travel the world
-author: Karen
+author: By Karen
 categories: 
   - beauty 
   - travel 
   - food 
-featured_image: /images/placeholder.JPG
+featured_image: /images/norway47.JPG
 date: 2022-11-19 00:00:00
 page_blocks:
   - _id: banner
@@ -26,16 +26,16 @@ page_blocks:
     gallery:
       - background_image: /images/placeholder.JPG
         aspect-ratio: aspect-square
-        column-size: 
+        column-size: 1
       - background_image: /images/placeholder.JPG
         aspect-ratio: aspect-square
-        column-size:
+        column-size: 1
       - background_image: /images/placeholder.JPG
         aspect-ratio: aspect-square
-        column-size:
+        column-size: 1
       - background_image: /images/placeholder.JPG
         aspect-ratio: aspect-square
-        column-size:
+        column-size: 1
       - background_image: /images/placeholder.JPG
         aspect-ratio: aspect-landscape
         column-size: 2

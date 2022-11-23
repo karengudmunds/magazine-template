@@ -1,12 +1,13 @@
 ---
 layout: post
-title: Let's travel the world
-author: Karen
+title: Photography tours
+author: By Karen
 categories: 
-  - beauty 
+  - photography
   - travel 
   - food 
-featured_image: /images/placeholder.JPG
+featured_image: /images/norway45.JPG
+hover_image: /images/norway2.JPG
 date: 2022-11-19 00:00:00
 page_blocks:
   - _id: banner
