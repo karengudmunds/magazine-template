@@ -72,9 +72,16 @@ seo:
   {% cycle 'md:col-span-1', 'md:col-span-2 md:row-span-2', 'md:col-span-1', 'md:col-span-1', 'md:col-span-1',  %}" 
    href="{{post.url}}">     
    
-      <div 
-              class="bg-[url('{{post.featured_image}}')] hover:bg-[url('{{post.hover_image}}')] transition-all  p-4  aspect-square bg-cover bg-center">
-      </div> 
+   <div class= "p-4  aspect-square relative"> 
+    <div 
+              class="bg-[url('{{post.featured_image}}')]  bg-cover bg-center absolute w-full h-full">
+    </div> 
+
+    <div 
+      class="bg-[url('{{post.hover_image}}')] opacity-0 hover:opacity-100 transition duration-500 bg-cover bg-center absolute w-full h-full">
+  </div> 
+</div> 
+
       <div class="p-2 md:p-4 relative -top-4 left-4 bg-white">
       <h3 class="uppercase font-extralight text-zinc-600 text-xs"> {{post.categories[0]}} </h3>   
       <h2 class="md:text-3xl text-zinc-800"> {{post.title}} </h2>
