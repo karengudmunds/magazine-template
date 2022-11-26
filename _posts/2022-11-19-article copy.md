@@ -3,7 +3,6 @@ layout: post
 title: My top places in Iceland
 author: By Tina
 categories: 
-  - location
   - travel 
   - food 
   - beauty

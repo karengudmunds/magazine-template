@@ -213,3 +213,19 @@ margin-bottom: 2rem;
 .search-result {
 border: 1px solid black
 }
+
+
+/*  card  */
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 20px 25px -5px #0003, 0 10px 10px -5px #0003;
+  top: -5px;
+}
+
+.card {
+  transitionl: .3s;
+  position: relative;
+  top: 0;
+  box-shadow: 0 0 0 0 rgba(100, 100, 200, 0),0 0 0 0 rgba(100, 100, 200, 0);
+}

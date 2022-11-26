@@ -6,28 +6,31 @@ category: restaurant
 
 <!--  This is the restaurant page  -->
 
-  {% assign pageCategory = page.categories[0] %}
+  {% assign pageCategory = page.category %}
   {% assign restaurantPosts = site.categories[pageCategory] %}
 
 
-<section class="bg-blue-200 p-5p">
-  <h1 class="text-5xl text-center"> Most popular restaurants </h1>
+<section class="bg-blue-200 ">
+  <h1 class="text-5xl text-center pt-5p mb-4"> Most popular restaurants </h1>
 
+  <div class="flex gap-6 flex-flow flex-nonwrap overflow-x-scroll p-5p pt-4">
   {% for item in restaurantPosts %}  
 
-  <div class="card rounded-t-lg rounded-b-lg p-8 overflow-hidden max-w-xs sm:max-w-sm">
+  <div class="card rounded-t-lg rounded-b-lg overflow-hidden max-w-[18rem] flex-shrink-0">
 
-      <div class="aspect-[3/4] bg-cover bg-center rounded-t-lg " style="background-image: url('/images/placeholder.jpg');"> 
+      <div class="aspect-[4/5] bg-cover bg-center rounded-t-lg " style="background-image: url('/images/placeholder.jpg');"> 
       </div> 
       <div class="bg-white p-6 rounded-b-lg">
-        <h3 class="text-xl"> Best restaurant in Iceland </h3> 
-        <p class="mb-4 font-extralight"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis culpa, aliquam est id qui atque optio odio sit. </p> 
+        <h3 class="text-xl"> Best cafes in Iceland </h3> 
+        <p class="mb-4 font-extralight"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis culpa, aliquam est... </p> 
         <span class="p-2 restaurants bg-yellow-500 rounded-t-lg rounded-b-lg"> bistro </span>
        </div>
   </div> 
-</div> 
+
 
 {% endfor %}
+
+</div> 
 
 </section> 
 
