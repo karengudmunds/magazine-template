@@ -13,10 +13,12 @@ module.exports = {
     theme: {
       fontFamily: {
        sans: [ 'Manrope', 'sans-serif' ],
+       serif: [ 'Martel Sans', 'sans-serif' ],
     },
     extend: {
       aspectRatio: {
         'landscape': '4/3',
+        'landscape-wide': '16/9',
         'portrait': '3/4',
         'portrait-tall': '3/5',
       },
