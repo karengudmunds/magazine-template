@@ -1,22 +1,35 @@
 ---
 layout: default
+category: restaurant
 ---
 
 
 <!--  This is the restaurant page  -->
 
-<section class="bg-blue-400">
-  <div class="card rounded-t-lg rounded-b-lg p-8 overflow-hidden w-2xl">
-    <div>
-      <a href="/"> </a> 
-    </div>
-      <div class="aspect-portrait bg-cover bg-center rounded-t-lg " style="background-image: url('/images/placeholder.jpg');"> 
+  {% assign pageCategory = page.categories[0] %}
+  {% assign restaurantPosts = site.categories[pageCategory] %}
+
+
+<section class="bg-blue-200 p-5p">
+  <h1 class="text-5xl text-center"> Most popular restaurants </h1>
+
+  {% for item in restaurantPosts %}  
+
+  <div class="card rounded-t-lg rounded-b-lg p-8 overflow-hidden max-w-xs sm:max-w-sm">
+
+      <div class="aspect-[3/4] bg-cover bg-center rounded-t-lg " style="background-image: url('/images/placeholder.jpg');"> 
       </div> 
-      <div class="bg-white p-8 rounded-b-lg">
-        <h3 class="p-2text-xl"> Best restaurant in Iceland </h3> 
-        <p class="p-2 font-extralight"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis culpa, aliquam est id qui atque optio odio sit. </p> 
-        <span class="restaurants"> restaurants </span>
+      <div class="bg-white p-6 rounded-b-lg">
+        <h3 class="text-xl"> Best restaurant in Iceland </h3> 
+        <p class="mb-4 font-extralight"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis culpa, aliquam est id qui atque optio odio sit. </p> 
+        <span class="p-2 restaurants bg-yellow-500 rounded-t-lg rounded-b-lg"> bistro </span>
        </div>
   </div> 
 </div> 
+
+{% endfor %}
+
 </section> 
+
+
+

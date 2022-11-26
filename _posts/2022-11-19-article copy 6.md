@@ -3,7 +3,9 @@ layout: post
 title: Let's travel the world
 author: By Karen
 categories: 
-  - restaurant 
+  - travel 
+  - beauty 
+  - food 
 featured_image: /images/norway2.JPG
 hover_image: /images/norway11.JPG
 date: 2022-11-19 00:00:00

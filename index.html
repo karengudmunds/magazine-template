@@ -100,7 +100,7 @@ seo:
 
 <!--  Text / image section  -->
 <section class="grid grid-cols-12 items-center justify-center max-w-screen-2xl mx-auto pb-10p">
-  <div class="col-span-full sm:col-span-5  lg:col-span-3 p-12 md:bg-slate-100 relative md:-right-20">
+  <div class="col-span-full sm:col-span-5  lg:col-span-3 p-12 md:bg-blue-200 relative md:-right-20">
     <h2 class="text-3xl text-zinc-800 mb-2"> This this a heading </h2>
     <p class="mb-2"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
     <a href="#"> buy your copy </a> 
@@ -114,11 +114,11 @@ seo:
 <!--  Location -->
 <!--  6x different posts / when hover text shows up from bottom / opacity color - black / text white -->
 
-<section class="grid grid-cols-full text-center p-8"> 
+<section class="grid grid-cols-full text-center p-5"> 
 <h1 class="text-3xl"> Find your perfect tour for the weekend </h1> 
 </section> 
 
-<section class="grid grid-cols-6">
+<section class="grid grid-cols-6 p-5p">
 
 
   {% assign pageCategory = page.categories[0] %}
@@ -127,9 +127,10 @@ seo:
   {% for item in site.posts limit:6 %}
 
   <!-- <div class="aspect-portrait-tall  bg-image bg-cover bg-center relative"style="background-image:url('/images/norway11.jpg')"> -->
-    
-    <div class="bg-image bg-cover bg-center aspect-portrait-tall relative" style="background-image:url('{{item.featured_image}}')" alt="">
-    <div class="hover:bg-zinc-600/50 p-3 text-transparent hover:text-white absolute inset-0 flex items-center">
+  
+    <div class="p-2">
+    <div class="bg-image bg-cover bg-center aspect-portrait-tall relative rounded-t-lg rounded-b-lg" style="background-image:url('{{item.featured_image}}')" alt="">
+    <div class="hover:bg-zinc-600/50 p-3 text-transparent hover:text-white absolute inset-0 flex items-center rounded-t-lg rounded-b-lg">
       <div>
           <h2 class="font-serif text-xl"> {{item.title}} </h2> 
           <p> {{item.description_html}} </p> 
@@ -137,6 +138,8 @@ seo:
       </div>
     </div>
   </div> 
+</div> 
+
 
   {% endfor %}
 </section>  
