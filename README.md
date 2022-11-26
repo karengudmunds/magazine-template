@@ -6,7 +6,6 @@ This boilerplate uses the following dependencies & plugins:
 
 - Jekyll (~>4.3.1)
 - TailwindCSS (^3.2.4)
-- jekyll-postcss plugin
 
 Detailed dependencies listed in the [Gemfile](./Gemfile) and [package.json](./package.json)
   
@@ -25,21 +24,30 @@ Detailed dependencies listed in the [Gemfile](./Gemfile) and [package.json](./pa
 
 2. Open this folder in a Dev Container within VS Code
 
-Run Jekyll:
+3. If this is the **first time** you're running Jekyll, in the terminal, run
+    ```
+    $ bundle install
+    ```
+
+4. Run **Jekyll & Tailwind CLI** concurrently:
+    ```
+    $ npm run dev
+    ```
+
+### Troubleshooting
+
+#### **Jekyll changes not detected or displayed**
+Run Jekyll & Tailwind CLI concurrently with polling:
 ```
-$ bundle exec jekyll s
+$ npm run dev:poll
 ```
-or `bundle exec jekyll s -l`, `bundle exec jekyll serve --livereload`
-
-
-## Troubleshooting
-
-**If running into the `Error: unterminated attribute selector for type` error:**
-
-Run `npm audit fix` to restore working order.
-
-Often, cleaning the cache by deleting the `.jekyll-cache` folder will also allow to run the `build` or `serve` commands
-
-**If running into the PostCSS error `Cannot load module`:**
-
-Delete both `node_modules` and `jekyll-cache` folders, run `npm i` and then start Jekyll server with `bundle exec jekyll s` 
+#### **Debug a Jekyll error**
+Run the debug command:
+```
+$ npm run dev:trace
+```
+#### **Jekyll error message related to rexml**
+Run the bundler install command:
+```
+$ bundle install
+```
