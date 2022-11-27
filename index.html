@@ -62,29 +62,32 @@ seo:
 
 <!--  This is the projects on the homepage  -->
 <section class="max-w-screen-2xl mx-auto">
-<div class="md:min-h-screen p-10
+<div class="lg:min-h-screen p-10
                     flex flex-nowrap overflow-x-scroll gap-1
-                    md:overflow-x-auto md:grid md:grid-cols-4  md:gap-4">
+                    lg:grid sm:grid-cols-4 lg:overflow-x-auto   lg:gap-4">
 
   {% for post in site.posts limit:5 %}
 
-  <a class="p-2 md:p-4 relative block w-4/5 md:w-auto flex-shrink-0
-  {% cycle 'md:col-span-1', 'md:col-span-2 md:row-span-2', 'md:col-span-1', 'md:col-span-1', 'md:col-span-1',  %}" 
-   href="{{post.url}}">     
+  <!-- first default styles, then mobile styles, then desktop styles -->
+  <a class="relative block
+                  p-2 w-4/5 md:w-2/5 flex-shrink-0
+                  lg:p-4  lg:w-auto 
+                  {% cycle 'lg:col-span-1', 'lg:col-span-2 lg:row-span-2', 'lg:col-span-1', 'lg:col-span-1', 'lg:col-span-1',  %}" 
+      href="{{post.url}}">     
    
-   <div class= "p-4  aspect-square relative"> 
-    <div 
-              class="bg-[url('{{post.featured_image}}')]  bg-cover bg-center absolute w-full h-full">
+   <div class= "p-4 aspect-square relative"> 
+        <div 
+                  class="bg-[url('{{post.featured_image}}')]  bg-cover bg-center absolute w-full h-full inset-0">
+        </div> 
+
+        <div 
+          class="bg-[url('{{post.hover_image}}')] opacity-0 hover:opacity-100 transition duration-500 bg-cover bg-center absolute w-full h-full inset-0">
+      </div> 
     </div> 
 
-    <div 
-      class="bg-[url('{{post.hover_image}}')] opacity-0 hover:opacity-100 transition duration-500 bg-cover bg-center absolute w-full h-full">
-  </div> 
-</div> 
-
-      <div class="p-2 md:p-4 relative -top-4 left-4 bg-white">
+      <div class="p-2 sm:p-4 relative -top-4 left-4 bg-white">
       <h3 class="uppercase font-extralight text-zinc-600 text-xs"> {{post.categories[0]}} </h3>   
-      <h2 class="md:text-3xl text-zinc-800"> {{post.title}} </h2>
+      <h2 class="md:text-2xl lg:text-3xl text-zinc-800"> {{post.title}} </h2>
       <hr class="border-blue-300 w-10 border-t-2 mt-4 mb-4"> 
       <h2 class="uppercase font-extralight text-zinc-600 text-xs"> {{post.author}} </h2> 
       </div>
@@ -100,7 +103,7 @@ seo:
 
 <!--  Text / image section  -->
 <section class="grid grid-cols-12 items-center justify-center max-w-screen-2xl mx-auto pb-10p">
-  <div class="col-span-full sm:col-span-5  lg:col-span-3 p-12 md:bg-blue-200 relative md:-right-20">
+  <div class="col-span-full sm:col-span-5  lg:col-span-3 p-12 md:bg-sky-100 relative md:-right-20">
     <h2 class="text-3xl text-zinc-800 mb-2"> This this a heading </h2>
     <p class="mb-2"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
     <a href="#"> buy your copy </a> 
@@ -128,13 +131,13 @@ seo:
 
   <!-- <div class="aspect-portrait-tall  bg-image bg-cover bg-center relative"style="background-image:url('/images/norway11.jpg')"> -->
   
-    <div class="p-2">
+    <div class="p-2 group overflow-hidden">
     <div class="bg-image bg-cover bg-center aspect-portrait-tall relative rounded-t-lg rounded-b-lg" style="background-image:url('{{item.featured_image}}')" alt="">
-    <div class="hover:bg-zinc-600/50 p-3 text-transparent hover:text-white absolute inset-0 flex items-center rounded-t-lg rounded-b-lg">
-      <div>
-          <h2 class="font-serif text-xl"> {{item.title}} </h2> 
-          <p> {{item.description_html}} </p> 
-          <a class="font-sans"> read more </a> 
+    <div class="group-hover:bg-zinc-600/50 p-3 text-transparent group-hover:text-white absolute inset-0 flex items-end rounded-t-lg rounded-b-lg transition-all duration-400">
+      <div class="group-hover:bottom-6 transition-all duration-700 relative bottom-[-10rem] bg-clip-text">
+          <h2 class="font-serif text-xl tracking-tight bg-clip-text"> {{item.title}} </h2> 
+          <!-- <p> {{item.description_html}} </p>  -->
+          <a class="font-sans group-hover:border-b bg-clip-text"> read more </a> 
       </div>
     </div>
   </div> 
@@ -152,10 +155,10 @@ seo:
   {% assign pageCategory = page.categories[0] %}
   {% assign location = site.categories[pageCategory] | where_exp:"post","post.url != page.url" %}
 
-  {% for item in site.posts limit:6 %} -->
+  {% for item in site.posts limit:6 %}
 
-  <!-- <div class="aspect-portrait-tall  bg-image bg-cover bg-center relative"style="background-image:url('/images/norway11.jpg')"> -->
-    <!-- <div class="bg-image bg-cover bg-center aspect-square relative flex items-end" style="background-image:url('{{item.featured_image}}')" alt="">
+  <div class="aspect-portrait-tall  bg-image bg-cover bg-center relative"style="background-image:url('/images/norway11.jpg')">
+    <div class="bg-image bg-cover bg-center aspect-square relative flex items-end" style="background-image:url('{{item.featured_image}}')" alt="">
     <div class="p-3 bg-zinc-50/90  m-4 grow">
 
           <h2 class="font-serif text-xl"> {{item.title}} </h2> 

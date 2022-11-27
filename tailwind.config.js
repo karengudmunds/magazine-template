@@ -26,6 +26,15 @@ module.exports = {
         '5p': '5%',
         '10p': '10%',
       },
+      animation: {
+      'bottom-slide-up': 'bottomSlideUp 1.2s linear', 
+      },
+      keyframes: {
+        bottomSlideUp: {
+          '0%': {marginBottom:'0rem',},
+          '100%': {marginBottom: '1rem',},
+        },
+      },
     },
   },
 }
