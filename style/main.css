@@ -229,3 +229,9 @@ border: 1px solid black
   top: 0;
   box-shadow: 0 0 0 0 rgba(100, 100, 200, 0),0 0 0 0 rgba(100, 100, 200, 0);
 }
+
+/*  tags colors  */
+
+.bistro {background-color: #272; }
+
+.fine.dining {background-color: #5454E5; }

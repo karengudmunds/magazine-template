@@ -2,10 +2,10 @@
 layout: post
 title: Let's travel the world
 author: By Karen
-categories: 
-  - restaurant 
-featured_image: /images/norway2.JPG
-hover_image: /images/norway11.JPG
+categories:  
+  - restaurant
+tags: bistro
+featured_image: /images/placeholder3.jpg
 date: 2022-11-19 00:00:00
 page_blocks:
   - _id: text-content
